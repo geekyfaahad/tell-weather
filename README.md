@@ -13,7 +13,7 @@ This Flask application provides current weather information for a specified city
 
 ├── api_secret.py<br>
 ├── LICENSE<br>
-├── __pycache__<br>
+├── pycache<br>
 ├── README.md<br>
 ├── server/<br>
 ├── templates/<br>
