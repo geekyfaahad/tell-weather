@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami:wght&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <style>
+h1 {
+	color: #000;
+	font-weight: 900;
+	text-shadow: 0 0 2px #fff;
+}
+h2 {
+  text-transform: capitalize;
+  font-weight: 900;
+  text-shadow: 0 0 2px #000;
+}
+h3 {
+    white-space: nowrap;
+    color: #000;
+    font-weight: bolder;
+    text-shadow: 0 0 2px #fff;
+    font-size: xx-large;
+}
+.bg-image {
+  background-image: url("{{ background_image_url }}");
+  backdrop-filter: blur(110px);
+  -webkit-filter: blur(1px);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div id="form">
+        <h1>Current Weather</h1>
+        <h2>{{ city }}</h2>
+        <h3>{{ result }} °C</h3><img src="{{ icon_url }}" alt="Weather Icon">
+    </div>
+</body>
+</html>
